@@ -21,14 +21,14 @@ namespace ReusePods
                 {
 
                     foreach (Building_PodFunnel funnel in map.listerBuildings.AllBuildingsColonistOfClass<Building_PodFunnel>()) {
-                        Log.Message("Searching funnels...");
+                        //Log.Message("Searching funnels...");
                         if (funnel.Position.Roofed(funnel.Map)) {
-                            Log.Message("Funnel roofed, continuing...");
+                            //Log.Message("Funnel roofed, continuing...");
                             continue;
                         }
 
                         if (ReusePods_Utils.FindLandingPads(map, funnel.Position).Count < dropPods.Count) {
-                            Log.Message("Splitting pods");
+                            //Log.Message("Splitting pods");
                             List<ActiveDropPodInfo> splitPods = new List<ActiveDropPodInfo>();
                             for (int i = 0; i < ReusePods_Utils.FindLandingPads(map, funnel.Position).Count; i++) {
                                 splitPods.Add(dropPods[i]);
