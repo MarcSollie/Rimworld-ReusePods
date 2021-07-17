@@ -26,7 +26,7 @@ namespace ReusePods {
         private int getServiceCount() {
             List<Building> outputList = new List<Building>();
 
-            foreach (Building_PodLauncher item in this.Map.listerBuildings.AllBuildingsColonistOfClass<Building_PodLauncher>())
+            foreach (Building item in this.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("PodLauncher")))
             {
                 if (item.Position.DistanceTo(this.Position) <= 20f)
                 {

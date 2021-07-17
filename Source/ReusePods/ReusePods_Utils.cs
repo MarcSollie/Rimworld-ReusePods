@@ -49,7 +49,7 @@ namespace ReusePods
 		{
 			List<Building> outputList = new List<Building>();
 
-			foreach (Building_PodLauncher item in map.listerBuildings.AllBuildingsColonistOfClass<Building_PodLauncher>())
+			foreach (Building item in map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("PodLauncher")))
 			{
 				if (item.Position.DistanceTo(center) <= radius)
 				{
