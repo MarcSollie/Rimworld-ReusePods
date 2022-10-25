@@ -57,8 +57,8 @@ namespace ReusePods
 				}
 			}
 
-			if(Verse.ModLister.HasActiveModWithName("Vanilla Furniture Expanded - Power"))
-			foreach (Building item in map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("VPE_GasPodLauncher")))
+			if(Verse.ModLister.HasActiveModWithName("Vanilla Helixien Gas Expanded"))
+			foreach (Building item in map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("VHGE_GasOperatedPodLauncher")))
 			{
 				if (item.Position.DistanceTo(center) <= radius)
 				{
