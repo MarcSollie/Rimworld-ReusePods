@@ -66,7 +66,17 @@ namespace ReusePods
 				}
 			}
 
-			return outputList;
+            if (Verse.ModLister.HasActiveModWithName("Electric Pod Launchers"))
+                foreach (Building item in map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("PBL_ElectricPodLauncher")))
+                {
+                    if (item.Position.DistanceTo(center) <= radius)
+                    {
+                        outputList.Add(item);
+                    }
+                }
+
+
+            return outputList;
 		}
 
 		internal static List<IntVec3> FindLandingPads(Map map, IntVec3 cell)
