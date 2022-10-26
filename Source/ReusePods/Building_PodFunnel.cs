@@ -45,6 +45,18 @@ namespace ReusePods {
                 }
             }
 
+            if (Verse.ModLister.HasActiveModWithName("Electric Pod Launchers"))
+            {
+                foreach (Building item in this.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("PBL_ElectricPodLauncher")))
+                {
+                    if (item.Position.DistanceTo(this.Position) <= 20f)
+                    {
+                        outputList.Add(item);
+                    }
+                }
+            }
+
+
             return outputList.Count;
         }
 
